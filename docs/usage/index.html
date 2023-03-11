@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  
+    <title>Usage :: Envy Lint</title>
+  
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="How to install and use envy.
+Setup Install envy.
+go get github.com/envy-lint/envy Usage You can run envy several ways.
+Default By default, envy will look for a .env file in the current directory.
+envy Specify file Specify a file with the -f flag.
+envy -f sample.env Stdin Pipe output to envy.
+echo sample.env | envy " />
+<meta name="keywords" content=".env linter lint golang go" />
+<meta name="robots" content="noodp" />
+
+<link rel="canonical" href="https://envylint.dev/usage/" />
+
+
+
+
+
+
+  
+  
+  
+  
+  
+  <link rel="stylesheet" href="https://envylint.dev/styles.css">
+
+
+
+
+
+
+
+  <link rel="shortcut icon" href="https://envylint.dev/img/theme-colors/orange.png">
+  <link rel="apple-touch-icon" href="https://envylint.dev/img/theme-colors/orange.png">
+
+
+
+<meta name="twitter:card" content="summary" />
+
+
+
+<meta property="og:locale" content="en" />
+<meta property="og:type" content="article" />
+<meta property="og:title" content="Usage">
+<meta property="og:description" content="How to install and use envy.
+Setup Install envy.
+go get github.com/envy-lint/envy Usage You can run envy several ways.
+Default By default, envy will look for a .env file in the current directory.
+envy Specify file Specify a file with the -f flag.
+envy -f sample.env Stdin Pipe output to envy.
+echo sample.env | envy " />
+<meta property="og:url" content="https://envylint.dev/usage/" />
+<meta property="og:site_name" content="Envy Lint" />
+
+  
+    <meta property="og:image" content="img/favicon/%!s().png">
+  
+
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="627">
+
+
+
+
+
+
+
+
+
+
+
+
+
+</head>
+<body class="">
+
+
+<div class="container center headings--one-size">
+
+  <header class="header">
+  <div class="header__inner">
+    <div class="header__logo">
+      <a href="/">
+  <div class="logo">
+    Envy
+  </div>
+</a>
+
+    </div>
+    
+      <ul class="menu menu--mobile">
+  <li class="menu__trigger">Menu&nbsp;▾</li>
+  <li>
+    <ul class="menu__dropdown">
+      
+        
+          <li><a href="/about">About</a></li>
+        
+      
+        
+          <li><a href="/usage">Usage</a></li>
+        
+      
+        
+          <li><a href="/checks">Checks</a></li>
+        
+      
+      
+    </ul>
+  </li>
+</ul>
+
+    
+    
+  </div>
+  
+    <nav class="navigation-menu">
+  <ul class="navigation-menu__inner menu--desktop">
+    
+      
+        
+          <li><a href="/about">About</a></li>
+        
+      
+        
+          <li><a href="/usage">Usage</a></li>
+        
+      
+        
+          <li><a href="/checks">Checks</a></li>
+        
+      
+    
+  </ul>
+</nav>
+
+  
+</header>
+
+
+  <div class="content">
+    
+<article class="post">
+  <h1 class="post-title">
+    <a href="https://envylint.dev/usage/">Usage</a>
+  </h1>
+  <div class="post-meta">
+    
+    
+    
+  </div>
+
+  
+  
+
+
+  
+
+  <div class="post-content"><div>
+        <p>How to install and use <strong>envy</strong>.</p>
+<h2 id="setup">Setup<a href="#setup" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h2>
+<p>Install <strong>envy</strong>.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>go get github.com/envy-lint/envy
+</span></span></code></pre></div><h2 id="usage">Usage<a href="#usage" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h2>
+<p>You can run <strong>envy</strong> several ways.</p>
+<h4 id="default">Default<a href="#default" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h4>
+<p>By default, <code>envy</code> will look for a <code>.env</code> file in the current directory.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>envy
+</span></span></code></pre></div><h2 id="specify-file">Specify file<a href="#specify-file" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h2>
+<p>Specify a file with the <code>-f</code> flag.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>envy -f sample.env
+</span></span></code></pre></div><h2 id="stdin">Stdin<a href="#stdin" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h2>
+<p>Pipe output to <strong>envy</strong>.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>echo sample.env | envy
+</span></span></code></pre></div>
+      </div></div>
+
+  
+
+  
+    
+
+  
+</article>
+
+  </div>
+
+  
+    <footer class="footer">
+  <div class="footer__inner">
+    
+      <div class="copyright">
+        <span>&copy; 2023 Powered by <a href="http://gohugo.io">Hugo</a></span>
+    
+      <span>:: <a href="https://github.com/panr/hugo-theme-terminal" target="_blank">Terminal</a> Theme</span>
+      </div>
+  </div>
+</footer>
+
+
+
+
+
+
+<script type="text/javascript" src="/bundle.min.js"></script>
+
+
+
+
+
+  
+</div>
+
+</body>
+</html>

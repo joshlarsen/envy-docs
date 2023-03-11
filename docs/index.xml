@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Envy Lint</title>
+    <link>https://envylint.dev/</link>
+    <description>Recent content on Envy Lint</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language><atom:link href="https://envylint.dev/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>About</title>
+      <link>https://envylint.dev/about/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://envylint.dev/about/</guid>
+      <description>Envy Envy is a linter for .env files written in Go. It aims to be fast, accurate, and easy to use. It runs on Windows, Linux, and macOS.
+Envy can help lint single .env files, lint entire directories of .env files, or be integrated into CI to lint build and deployment stage .env files.
+Envy was inspired by the Rust .env linter dotenv-linter, with the aim to provide similar functionality, but from a tool written in Go.</description>
+      <content>&lt;h1 id=&#34;envy&#34;&gt;Envy&lt;/h1&gt;
+&lt;p&gt;Envy is a linter for &lt;code&gt;.env&lt;/code&gt; files written in Go. It aims to be fast, accurate, and easy to use. It runs on Windows, Linux, and macOS.&lt;/p&gt;
+&lt;p&gt;Envy can help lint single &lt;code&gt;.env&lt;/code&gt; files, lint entire directories of &lt;code&gt;.env&lt;/code&gt; files, or be integrated into CI to lint build and deployment stage &lt;code&gt;.env&lt;/code&gt; files.&lt;/p&gt;
+&lt;p&gt;Envy was inspired by the Rust &lt;code&gt;.env&lt;/code&gt; linter &lt;a href=&#34;https://dotenv-linter.github.io/&#34;&gt;dotenv-linter&lt;/a&gt;, with the aim to provide similar functionality, but from a tool written in Go.&lt;/p&gt;
+&lt;p&gt;Envy checks &lt;code&gt;.env&lt;/code&gt; files for things like:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;duplicate keys&lt;/li&gt;
+&lt;li&gt;unordered keys&lt;/li&gt;
+&lt;li&gt;malformed keys&lt;/li&gt;
+&lt;li&gt;malformed values&lt;/li&gt;
+&lt;li&gt;incorrect casing&lt;/li&gt;
+&lt;li&gt;incorrect spacing&lt;/li&gt;
+&lt;li&gt;incorrect quoting&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Read more about &lt;a href=&#34;https://envylint.dev/usage&#34;&gt;usage&lt;/a&gt; and &lt;a href=&#34;https://envylint.dev/checks&#34;&gt;checks&lt;/a&gt;, or check out the &lt;a href=&#34;https://github.com/envy-lint/envy&#34;&gt;source&lt;/a&gt;&lt;/p&gt;
+</content>
+    </item>
+    
+    <item>
+      <title>Checks</title>
+      <link>https://envylint.dev/checks/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://envylint.dev/checks/</guid>
+      <description>Envy checks for the following .env file best practices and required items.
+Checks Valid key starts with a number or capital latter Valid value Valid key prefix No empty value Uh oh, this is a note this is a thing</description>
+      <content>&lt;p&gt;Envy checks for the following &lt;code&gt;.env&lt;/code&gt; file best practices and required items.&lt;/p&gt;
+&lt;h3 id=&#34;checks&#34;&gt;Checks&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;Valid key
+&lt;ol&gt;
+&lt;li&gt;starts with a number or capital latter&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/li&gt;
+&lt;li&gt;Valid value&lt;/li&gt;
+&lt;li&gt;Valid key prefix&lt;/li&gt;
+&lt;li&gt;No empty value&lt;/li&gt;
+&lt;/ol&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Uh oh, this is a note
+this is a thing&lt;/p&gt;
+&lt;/blockquote&gt;
+</content>
+    </item>
+    
+    <item>
+      <title>Usage</title>
+      <link>https://envylint.dev/usage/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://envylint.dev/usage/</guid>
+      <description>How to install and use envy.
+Setup Install envy.
+go get github.com/envy-lint/envy Usage You can run envy several ways.
+Default By default, envy will look for a .env file in the current directory.
+envy Specify file Specify a file with the -f flag.
+envy -f sample.env Stdin Pipe output to envy.
+echo sample.env | envy </description>
+      <content>&lt;p&gt;How to install and use &lt;strong&gt;envy&lt;/strong&gt;.&lt;/p&gt;
+&lt;h2 id=&#34;setup&#34;&gt;Setup&lt;/h2&gt;
+&lt;p&gt;Install &lt;strong&gt;envy&lt;/strong&gt;.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;go get github.com/envy-lint/envy
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;usage&#34;&gt;Usage&lt;/h2&gt;
+&lt;p&gt;You can run &lt;strong&gt;envy&lt;/strong&gt; several ways.&lt;/p&gt;
+&lt;h4 id=&#34;default&#34;&gt;Default&lt;/h4&gt;
+&lt;p&gt;By default, &lt;code&gt;envy&lt;/code&gt; will look for a &lt;code&gt;.env&lt;/code&gt; file in the current directory.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;envy
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;specify-file&#34;&gt;Specify file&lt;/h2&gt;
+&lt;p&gt;Specify a file with the &lt;code&gt;-f&lt;/code&gt; flag.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;envy -f sample.env
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;stdin&#34;&gt;Stdin&lt;/h2&gt;
+&lt;p&gt;Pipe output to &lt;strong&gt;envy&lt;/strong&gt;.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;echo sample.env | envy
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</content>
+    </item>
+    
+  </channel>
+</rss>
