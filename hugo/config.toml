@@ -7,6 +7,11 @@ theme = "terminal"
   fullWidthTheme = false
   centerTheme = true
 
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
+
 [languages]
   [languages.en]
     languageName = "English"
@@ -32,14 +37,14 @@ theme = "terminal"
         identifier = "about"
         name = "About"
         url = "/about"
-	weight = 1
+        weight = 1
       [[languages.en.menu.main]]
         identifier = "usage"
         name = "Usage"
         url = "/usage"
-	weight = 2
+        weight = 2
       [[languages.en.menu.main]]
         identifier = "checks"
         name = "Checks"
         url = "/checks"
-	weight = 3
+        weight = 3
