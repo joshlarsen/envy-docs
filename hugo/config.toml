@@ -2,6 +2,7 @@ baseURL = "https://envylint.dev"
 languageCode = "en-us"
 title = "Envy Lint - A fast .env linter written in Go"
 theme = "terminal"
+enableEmoji = true
 
 [params]
   fullWidthTheme = false

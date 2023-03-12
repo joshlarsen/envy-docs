@@ -7,7 +7,9 @@
   <meta http-equiv="content-type" content="text/html; charset=utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="description" content="Envy checks for the following .env file best practices and required items.
-Checks Valid key starts with a number or capital latter Valid value Valid key prefix No empty value Uh oh, this is a note this is a thing" />
+Checks Valid key Valid value Valid key prefix No empty value Uh oh, this is a note this is a thing
+c1. Valid Key Checks that the key is valid. A valid key should consiste of only capital letters, numbers, and underscores.
+✅ MY_KEY=value ❌ my-key=value c2. Valid value Checks that they value is valid. A valid value must be a non-empty string." />
 <meta name="keywords" content=".env linter lint golang go" />
 <meta name="robots" content="noodp" />
 
@@ -44,7 +46,9 @@ Checks Valid key starts with a number or capital latter Valid value Valid key pr
 <meta property="og:type" content="article" />
 <meta property="og:title" content="Checks">
 <meta property="og:description" content="Envy checks for the following .env file best practices and required items.
-Checks Valid key starts with a number or capital latter Valid value Valid key prefix No empty value Uh oh, this is a note this is a thing" />
+Checks Valid key Valid value Valid key prefix No empty value Uh oh, this is a note this is a thing
+c1. Valid Key Checks that the key is valid. A valid key should consiste of only capital letters, numbers, and underscores.
+✅ MY_KEY=value ❌ my-key=value c2. Valid value Checks that they value is valid. A valid value must be a non-empty string." />
 <meta property="og:url" content="https://envylint.dev/checks/" />
 <meta property="og:site_name" content="Envy Lint" />
 
@@ -154,21 +158,41 @@ Checks Valid key starts with a number or capital latter Valid value Valid key pr
 
   <div class="post-content"><div>
         <p>Envy checks for the following <code>.env</code> file best practices and required items.</p>
-<h3 id="checks">Checks<a href="#checks" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h3>
-<ol>
-<li>Valid key
-<ol>
-<li>starts with a number or capital latter</li>
-</ol>
-</li>
-<li>Valid value</li>
-<li>Valid key prefix</li>
-<li>No empty value</li>
-</ol>
+<h1 id="checks">Checks<a href="#checks" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h1>
+<ul>
+<li><a href="#c1-valid-key">Valid key</a></li>
+<li><a href="#c2-valid-value">Valid value</a></li>
+<li><a href="#c3-valid-key-prefix">Valid key prefix</a></li>
+<li><a href="#c4-no-empty-value">No empty value</a></li>
+</ul>
 <blockquote>
 <p>Uh oh, this is a note
 this is a thing</p>
 </blockquote>
+<h4 id="c1-valid-key">c1. Valid Key<a href="#c1-valid-key" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h4>
+<p>Checks that the key is valid. A valid key should consiste of only capital letters, numbers, and underscores.</p>
+<ul>
+<li>✅ <code>MY_KEY=value</code></li>
+<li>❌ <code>my-key=value</code></li>
+</ul>
+<h4 id="c2-valid-value">c2. Valid value<a href="#c2-valid-value" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h4>
+<p>Checks that they value is valid. A valid value must be a non-empty string.</p>
+<ul>
+<li>✅ <code>MY_KEY=value</code></li>
+<li>❌ <code>MY_KEY=</code></li>
+</ul>
+<h4 id="c3-valid-key-prefix">c3. Valid key prefix<a href="#c3-valid-key-prefix" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h4>
+<p>Checks that the first character of the key is valid. A valid key prefix must be a capital letter or a number.</p>
+<ul>
+<li>✅ <code>MY_KEY=value</code></li>
+<li>❌ <code>mY_KEY=value</code></li>
+</ul>
+<h4 id="c4-no-empty-value">c4. No empty value<a href="#c4-no-empty-value" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h4>
+<p>Checks that the value is not an empty string.</p>
+<ul>
+<li>✅ <code>MY_KEY=value</code></li>
+<li>❌ <code>MY_KEY=</code></li>
+</ul>
 
       </div></div>
 

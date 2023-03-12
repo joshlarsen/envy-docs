@@ -40,23 +40,45 @@ Envy was inspired by the Rust .env linter dotenv-linter, with the aim to provide
       
       <guid>https://envylint.dev/checks/</guid>
       <description>Envy checks for the following .env file best practices and required items.
-Checks Valid key starts with a number or capital latter Valid value Valid key prefix No empty value Uh oh, this is a note this is a thing</description>
+Checks Valid key Valid value Valid key prefix No empty value Uh oh, this is a note this is a thing
+c1. Valid Key Checks that the key is valid. A valid key should consiste of only capital letters, numbers, and underscores.
+✅ MY_KEY=value ❌ my-key=value c2. Valid value Checks that they value is valid. A valid value must be a non-empty string.</description>
       <content>&lt;p&gt;Envy checks for the following &lt;code&gt;.env&lt;/code&gt; file best practices and required items.&lt;/p&gt;
-&lt;h3 id=&#34;checks&#34;&gt;Checks&lt;/h3&gt;
-&lt;ol&gt;
-&lt;li&gt;Valid key
-&lt;ol&gt;
-&lt;li&gt;starts with a number or capital latter&lt;/li&gt;
-&lt;/ol&gt;
-&lt;/li&gt;
-&lt;li&gt;Valid value&lt;/li&gt;
-&lt;li&gt;Valid key prefix&lt;/li&gt;
-&lt;li&gt;No empty value&lt;/li&gt;
-&lt;/ol&gt;
+&lt;h1 id=&#34;checks&#34;&gt;Checks&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#c1-valid-key&#34;&gt;Valid key&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#c2-valid-value&#34;&gt;Valid value&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#c3-valid-key-prefix&#34;&gt;Valid key prefix&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#c4-no-empty-value&#34;&gt;No empty value&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
 &lt;blockquote&gt;
 &lt;p&gt;Uh oh, this is a note
 this is a thing&lt;/p&gt;
 &lt;/blockquote&gt;
+&lt;h4 id=&#34;c1-valid-key&#34;&gt;c1. Valid Key&lt;/h4&gt;
+&lt;p&gt;Checks that the key is valid. A valid key should consiste of only capital letters, numbers, and underscores.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;✅ &lt;code&gt;MY_KEY=value&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;❌ &lt;code&gt;my-key=value&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;c2-valid-value&#34;&gt;c2. Valid value&lt;/h4&gt;
+&lt;p&gt;Checks that they value is valid. A valid value must be a non-empty string.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;✅ &lt;code&gt;MY_KEY=value&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;❌ &lt;code&gt;MY_KEY=&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;c3-valid-key-prefix&#34;&gt;c3. Valid key prefix&lt;/h4&gt;
+&lt;p&gt;Checks that the first character of the key is valid. A valid key prefix must be a capital letter or a number.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;✅ &lt;code&gt;MY_KEY=value&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;❌ &lt;code&gt;mY_KEY=value&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;c4-no-empty-value&#34;&gt;c4. No empty value&lt;/h4&gt;
+&lt;p&gt;Checks that the value is not an empty string.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;✅ &lt;code&gt;MY_KEY=value&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;❌ &lt;code&gt;MY_KEY=&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
 </content>
     </item>
     
