@@ -29,7 +29,7 @@ c1. Valid Key Checks that the key is valid. A valid key should consiste of only 
 
 
 
-
+<link rel="stylesheet" href="https://envylint.dev/style.css">
 
 
 
@@ -193,7 +193,15 @@ this is a thing</p>
 <li>✅ <code>MY_KEY=value</code></li>
 <li>❌ <code>MY_KEY=</code></li>
 </ul>
-
+<h4 id="c15-no-empty-last-line">c15. No empty last line<a href="#c15-no-empty-last-line" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h4>
+<p>Checks that the last line of an <code>.env</code> file is not empty.</p>
+<p>✅</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>MY_KEY<span style="color:#f92672">=</span>value1
+</span></span><span style="display:flex;"><span>OTHER<span style="color:#f92672">=</span>value2
+</span></span></code></pre></div><p>❌</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>MY_KEY<span style="color:#f92672">=</span>value1
+</span></span><span style="display:flex;"><span>OTHER<span style="color:#f92672">=</span>value2
+</span></span></code></pre></div>
       </div></div>
 
   

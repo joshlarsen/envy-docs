@@ -41,3 +41,22 @@ Checks that the value is not an empty string.
 
 - :white_check_mark: `MY_KEY=value`
 - :x: `MY_KEY=`
+
+#### c15. No empty last line
+
+Checks that the last line of an `.env` file is not empty.
+
+:white_check_mark:
+
+```bash
+MY_KEY=value1
+OTHER=value2
+```
+
+:x:
+
+```bash
+MY_KEY=value1
+OTHER=value2
+
+```

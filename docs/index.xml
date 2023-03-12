@@ -79,7 +79,15 @@ this is a thing&lt;/p&gt;
 &lt;li&gt;✅ &lt;code&gt;MY_KEY=value&lt;/code&gt;&lt;/li&gt;
 &lt;li&gt;❌ &lt;code&gt;MY_KEY=&lt;/code&gt;&lt;/li&gt;
 &lt;/ul&gt;
-</content>
+&lt;h4 id=&#34;c15-no-empty-last-line&#34;&gt;c15. No empty last line&lt;/h4&gt;
+&lt;p&gt;Checks that the last line of an &lt;code&gt;.env&lt;/code&gt; file is not empty.&lt;/p&gt;
+&lt;p&gt;✅&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;MY_KEY&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;value1
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;OTHER&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;value2
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;❌&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;MY_KEY&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;value1
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;OTHER&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;value2
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</content>
     </item>
     
     <item>
