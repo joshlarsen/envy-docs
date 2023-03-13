@@ -1,7 +1,7 @@
 cname = "envylint.dev"
 
-.PHONY: site
-site:
+.PHONY: docs
+docs:
 	@rm -rf docs
 	@mkdir -p docs
 	@echo $(cname) > docs/CNAME

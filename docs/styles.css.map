@@ -1,7 +1,7 @@
 {
 	"version": 3,
 	"file": "styles.css",
-	"sourceRoot": "/Users/josh/code/projects/envy-site/hugo",
+	"sourceRoot": "/Users/josh/code/projects/envy-lint/docs/hugo",
 	"sources": [
 		"css/base.scss",
 		"themes/terminal/assets/css/variables.scss",

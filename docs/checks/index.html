@@ -7,9 +7,7 @@
   <meta http-equiv="content-type" content="text/html; charset=utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="description" content="Envy checks for the following .env file best practices and required items.
-Checks Valid key Valid value Valid key prefix No empty value Uh oh, this is a note this is a thing
-c1. Valid Key Checks that the key is valid. A valid key should consiste of only capital letters, numbers, and underscores.
-✅ MY_KEY=value ❌ my-key=value c2. Valid value Checks that they value is valid. A valid value must be a non-empty string." />
+Checks [Duplicate key](#c1-duplicate-key Invalid delimiter in key Key without value Key is not sorted Key has an invalid first character (prefix) Key is not valid Value has unnecessary quotes Extra spacing around separator Value uses substitution without proper quoting Value has leading or trailing whitespace Value contains whitespace without proper quoting Last line is blank Multiple successive blank lines Value is missing proper quoting Line does not have a valid separator c1." />
 <meta name="keywords" content=".env linter lint golang go" />
 <meta name="robots" content="noodp" />
 
@@ -46,9 +44,7 @@ c1. Valid Key Checks that the key is valid. A valid key should consiste of only 
 <meta property="og:type" content="article" />
 <meta property="og:title" content="Checks">
 <meta property="og:description" content="Envy checks for the following .env file best practices and required items.
-Checks Valid key Valid value Valid key prefix No empty value Uh oh, this is a note this is a thing
-c1. Valid Key Checks that the key is valid. A valid key should consiste of only capital letters, numbers, and underscores.
-✅ MY_KEY=value ❌ my-key=value c2. Valid value Checks that they value is valid. A valid value must be a non-empty string." />
+Checks [Duplicate key](#c1-duplicate-key Invalid delimiter in key Key without value Key is not sorted Key has an invalid first character (prefix) Key is not valid Value has unnecessary quotes Extra spacing around separator Value uses substitution without proper quoting Value has leading or trailing whitespace Value contains whitespace without proper quoting Last line is blank Multiple successive blank lines Value is missing proper quoting Line does not have a valid separator c1." />
 <meta property="og:url" content="https://envylint.dev/checks/" />
 <meta property="og:site_name" content="Envy Lint" />
 
@@ -159,49 +155,142 @@ c1. Valid Key Checks that the key is valid. A valid key should consiste of only 
   <div class="post-content"><div>
         <p>Envy checks for the following <code>.env</code> file best practices and required items.</p>
 <h1 id="checks">Checks<a href="#checks" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h1>
+<ol>
+<li>[Duplicate key](#c1-duplicate-key</li>
+<li><a href="#c2-invalid-delimiter-in-key">Invalid delimiter in key</a></li>
+<li><a href="#c3-key-without-value">Key without value</a></li>
+<li><a href="#c4-key-is-not-sorted">Key is not sorted</a></li>
+<li><a href="#c5-key-has-an-invalid-first-character">Key has an invalid first character (prefix)</a></li>
+<li><a href="#c6-valid-key">Key is not valid</a></li>
+<li><a href="#c7-unnecessary-quotes">Value has unnecessary quotes</a></li>
+<li><a href="#c8-extra-spacing-around-separator">Extra spacing around separator</a></li>
+<li><a href="#c9-substitution-without-proper-quoting">Value uses substitution without proper quoting</a></li>
+<li><a href="#c10-leading-or-trailing-whitespace">Value has leading or trailing whitespace</a></li>
+<li><a href="#c11-whitespace-without-proper-quoting">Value contains whitespace without proper quoting</a></li>
+<li><a href="#c12-no-empty-last-line">Last line is blank</a></li>
+<li><a href="#c13-multiple-successive-blank-lines">Multiple successive blank lines</a></li>
+<li><a href="#c14-value-is-missing-proper-quoting">Value is missing proper quoting</a></li>
+<li><a href="#c15-line-does-not-have-a-valid-separator">Line does not have a valid separator</a></li>
+</ol>
+<h4 id="c1-duplicate-key">c1. Duplicate Key<a href="#c1-duplicate-key" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h4>
+<p>Checks that the key is not repeated.</p>
 <ul>
-<li><a href="#c1-valid-key">Valid key</a></li>
-<li><a href="#c2-valid-value">Valid value</a></li>
-<li><a href="#c3-valid-key-prefix">Valid key prefix</a></li>
-<li><a href="#c4-no-empty-value">No empty value</a></li>
+<li>✅ <code>KEY1=value1</code></li>
+<li>❌ <code>KEY1=value2</code></li>
+<li>❌ <code>KEY1=value3</code></li>
 </ul>
-<blockquote>
-<p>Uh oh, this is a note
-this is a thing</p>
-</blockquote>
-<h4 id="c1-valid-key">c1. Valid Key<a href="#c1-valid-key" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h4>
-<p>Checks that the key is valid. A valid key should consiste of only capital letters, numbers, and underscores.</p>
+<h4 id="c2-invalid-delimiter-in-key">c2. Invalid delimiter in key<a href="#c2-invalid-delimiter-in-key" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h4>
+<p>Checks that only underscores are used to separate words in the key.</p>
 <ul>
-<li>✅ <code>MY_KEY=value</code></li>
-<li>❌ <code>my-key=value</code></li>
+<li>✅ <code>KEY_1=value1</code></li>
+<li>❌ <code>KEY-1=value1</code></li>
 </ul>
-<h4 id="c2-valid-value">c2. Valid value<a href="#c2-valid-value" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h4>
-<p>Checks that they value is valid. A valid value must be a non-empty string.</p>
+<h4 id="c3-key-without-value">c3. Key without value<a href="#c3-key-without-value" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h4>
+<p>Checks that the key has a value. A valid value must be a non-empty string.</p>
 <ul>
-<li>✅ <code>MY_KEY=value</code></li>
-<li>❌ <code>MY_KEY=</code></li>
+<li>✅ <code>KEY=value</code></li>
+<li>❌ <code>KEY=</code></li>
 </ul>
-<h4 id="c3-valid-key-prefix">c3. Valid key prefix<a href="#c3-valid-key-prefix" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h4>
+<h4 id="c4-key-is-not-sorted">c4. Key is not sorted<a href="#c4-key-is-not-sorted" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h4>
+<p>Checks that keys art sorted lexicographically.</p>
+<ul>
+<li>✅ <code>KEYB=value2</code></li>
+<li>✅ <code>KEYC=value3</code></li>
+<li>✅ <code>KEYD=value4</code></li>
+<li>❌ <code>KEYA=value1</code></li>
+</ul>
+<h4 id="c5-key-has-an-invalid-first-character">c5. Key has an invalid first character<a href="#c5-key-has-an-invalid-first-character" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h4>
 <p>Checks that the first character of the key is valid. A valid key prefix must be a capital letter or a number.</p>
 <ul>
 <li>✅ <code>MY_KEY=value</code></li>
 <li>❌ <code>mY_KEY=value</code></li>
 </ul>
-<h4 id="c4-no-empty-value">c4. No empty value<a href="#c4-no-empty-value" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h4>
-<p>Checks that the value is not an empty string.</p>
+<h4 id="c6-valid-key">c6. Valid Key<a href="#c6-valid-key" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h4>
+<p>Checks that the key is valid. A valid key should consist of only capital letters, numbers, and underscores.</p>
 <ul>
-<li>✅ <code>MY_KEY=value</code></li>
-<li>❌ <code>MY_KEY=</code></li>
+<li>✅ <code>MY_KEY1=value1</code></li>
+<li>❌ <code>my-key-1=value1</code></li>
 </ul>
-<h4 id="c15-no-empty-last-line">c15. No empty last line<a href="#c15-no-empty-last-line" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h4>
+<h4 id="c7-unnecessary-quotes">c7. Unnecessary quotes<a href="#c7-unnecessary-quotes" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h4>
+<p>Checks that the value isn&rsquo;t quoted unnecessarily.</p>
+<ul>
+<li>✅ <code>KEY=&quot;quote this&quot;</code></li>
+<li>❌ <code>KEY=&quot;noquotes&quot;</code></li>
+</ul>
+<h4 id="c8-extra-spacing-around-separator">c8. Extra spacing around separator<a href="#c8-extra-spacing-around-separator" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h4>
+<p>Checks that there are no spaces around the separator.</p>
+<ul>
+<li>✅ <code>KEY=value</code></li>
+<li>❌ <code>KEY = value</code></li>
+<li>❌ <code>KEY= value</code></li>
+<li>❌ <code>KEY =value</code></li>
+</ul>
+<h4 id="c9-substitution-without-proper-quoting">c9. Substitution without proper quoting<a href="#c9-substitution-without-proper-quoting" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h4>
+<p>Checks that the value uses proper quoting around substitutions.</p>
+<ul>
+<li>✅ <code>KEY=&quot;some ${FOO} value&quot;</code></li>
+<li>❌ <code>KEY=some $FOO value</code></li>
+</ul>
+<h4 id="c10-leading-or-trailing-whitespace">c10. Leading or trailing whitespace<a href="#c10-leading-or-trailing-whitespace" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h4>
+<p>Checks that the value does&rsquo;t have leading or trailing whitespace</p>
+<ul>
+<li>✅ <code>KEY=value</code></li>
+<li>❌ <code>KEY= value</code></li>
+<li>❌ <code>KEY= value </code></li>
+<li>❌ <code>KEY=value </code></li>
+</ul>
+<h4 id="c11-whitespace-without-proper-quoting">c11. Whitespace without proper quoting<a href="#c11-whitespace-without-proper-quoting" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h4>
+<p>Checks that the value doesn&rsquo;t contain whitespace without proper quoting</p>
+<ul>
+<li>✅ <code>KEY=&quot;value with spaces&quot;</code></li>
+<li>❌ <code>KEY=value with spaces</code></li>
+<li>❌ <code>KEY=value with new\nlines</code></li>
+</ul>
+<h4 id="c12-no-empty-last-line">c12. No empty last line<a href="#c12-no-empty-last-line" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h4>
 <p>Checks that the last line of an <code>.env</code> file is not empty.</p>
+<ul>
+<li>
 <p>✅</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>MY_KEY<span style="color:#f92672">=</span>value1
-</span></span><span style="display:flex;"><span>OTHER<span style="color:#f92672">=</span>value2
-</span></span></code></pre></div><p>❌</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>MY_KEY<span style="color:#f92672">=</span>value1
-</span></span><span style="display:flex;"><span>OTHER<span style="color:#f92672">=</span>value2
-</span></span></code></pre></div>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>KEY1<span style="color:#f92672">=</span>value1
+</span></span><span style="display:flex;"><span>KEY2<span style="color:#f92672">=</span>value2
+</span></span></code></pre></div></li>
+<li>
+<p>❌</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>KEY1<span style="color:#f92672">=</span>value1
+</span></span><span style="display:flex;"><span>KEY2<span style="color:#f92672">=</span>value2
+</span></span><span style="display:flex;"><span> 
+</span></span></code></pre></div></li>
+</ul>
+<h4 id="c13-multiple-successive-blank-lines">c13. Multiple successive blank lines<a href="#c13-multiple-successive-blank-lines" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h4>
+<p>Checks that blank lines are not repeated.</p>
+<ul>
+<li>
+<p>✅</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>KEY1<span style="color:#f92672">=</span>value1
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>KEY2<span style="color:#f92672">=</span>value2
+</span></span></code></pre></div></li>
+<li>
+<p>❌</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>KEY1<span style="color:#f92672">=</span>value1
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>KEY2<span style="color:#f92672">=</span>value2 
+</span></span></code></pre></div></li>
+</ul>
+<h4 id="c14-value-is-missing-proper-quoting">c14. Value is missing proper quoting<a href="#c14-value-is-missing-proper-quoting" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h4>
+<p>Checks that values containing an equals sign are properly quoted.</p>
+<ul>
+<li>✅ <code>KEY=&quot;setting=true&quot;</code></li>
+<li>❌ <code>KEY=setting=true</code></li>
+</ul>
+<h4 id="c15-line-does-not-have-a-valid-separator">c15. Line does not have a valid separator<a href="#c15-line-does-not-have-a-valid-separator" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h4>
+<p>Checks that the line contains an equals sign separator.</p>
+<ul>
+<li>✅ <code>KEY=value</code></li>
+<li>❌ <code>KEY=&gt;value</code></li>
+</ul>
+
       </div></div>
 
   

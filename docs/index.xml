@@ -40,54 +40,145 @@ Envy was inspired by the Rust .env linter dotenv-linter, with the aim to provide
       
       <guid>https://envylint.dev/checks/</guid>
       <description>Envy checks for the following .env file best practices and required items.
-Checks Valid key Valid value Valid key prefix No empty value Uh oh, this is a note this is a thing
-c1. Valid Key Checks that the key is valid. A valid key should consiste of only capital letters, numbers, and underscores.
-✅ MY_KEY=value ❌ my-key=value c2. Valid value Checks that they value is valid. A valid value must be a non-empty string.</description>
+Checks [Duplicate key](#c1-duplicate-key Invalid delimiter in key Key without value Key is not sorted Key has an invalid first character (prefix) Key is not valid Value has unnecessary quotes Extra spacing around separator Value uses substitution without proper quoting Value has leading or trailing whitespace Value contains whitespace without proper quoting Last line is blank Multiple successive blank lines Value is missing proper quoting Line does not have a valid separator c1.</description>
       <content>&lt;p&gt;Envy checks for the following &lt;code&gt;.env&lt;/code&gt; file best practices and required items.&lt;/p&gt;
 &lt;h1 id=&#34;checks&#34;&gt;Checks&lt;/h1&gt;
+&lt;ol&gt;
+&lt;li&gt;[Duplicate key](#c1-duplicate-key&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#c2-invalid-delimiter-in-key&#34;&gt;Invalid delimiter in key&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#c3-key-without-value&#34;&gt;Key without value&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#c4-key-is-not-sorted&#34;&gt;Key is not sorted&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#c5-key-has-an-invalid-first-character&#34;&gt;Key has an invalid first character (prefix)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#c6-valid-key&#34;&gt;Key is not valid&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#c7-unnecessary-quotes&#34;&gt;Value has unnecessary quotes&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#c8-extra-spacing-around-separator&#34;&gt;Extra spacing around separator&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#c9-substitution-without-proper-quoting&#34;&gt;Value uses substitution without proper quoting&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#c10-leading-or-trailing-whitespace&#34;&gt;Value has leading or trailing whitespace&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#c11-whitespace-without-proper-quoting&#34;&gt;Value contains whitespace without proper quoting&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#c12-no-empty-last-line&#34;&gt;Last line is blank&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#c13-multiple-successive-blank-lines&#34;&gt;Multiple successive blank lines&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#c14-value-is-missing-proper-quoting&#34;&gt;Value is missing proper quoting&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#c15-line-does-not-have-a-valid-separator&#34;&gt;Line does not have a valid separator&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h4 id=&#34;c1-duplicate-key&#34;&gt;c1. Duplicate Key&lt;/h4&gt;
+&lt;p&gt;Checks that the key is not repeated.&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;#c1-valid-key&#34;&gt;Valid key&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#c2-valid-value&#34;&gt;Valid value&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#c3-valid-key-prefix&#34;&gt;Valid key prefix&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#c4-no-empty-value&#34;&gt;No empty value&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;✅ &lt;code&gt;KEY1=value1&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;❌ &lt;code&gt;KEY1=value2&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;❌ &lt;code&gt;KEY1=value3&lt;/code&gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;blockquote&gt;
-&lt;p&gt;Uh oh, this is a note
-this is a thing&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;h4 id=&#34;c1-valid-key&#34;&gt;c1. Valid Key&lt;/h4&gt;
-&lt;p&gt;Checks that the key is valid. A valid key should consiste of only capital letters, numbers, and underscores.&lt;/p&gt;
+&lt;h4 id=&#34;c2-invalid-delimiter-in-key&#34;&gt;c2. Invalid delimiter in key&lt;/h4&gt;
+&lt;p&gt;Checks that only underscores are used to separate words in the key.&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;✅ &lt;code&gt;MY_KEY=value&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;❌ &lt;code&gt;my-key=value&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;✅ &lt;code&gt;KEY_1=value1&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;❌ &lt;code&gt;KEY-1=value1&lt;/code&gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h4 id=&#34;c2-valid-value&#34;&gt;c2. Valid value&lt;/h4&gt;
-&lt;p&gt;Checks that they value is valid. A valid value must be a non-empty string.&lt;/p&gt;
+&lt;h4 id=&#34;c3-key-without-value&#34;&gt;c3. Key without value&lt;/h4&gt;
+&lt;p&gt;Checks that the key has a value. A valid value must be a non-empty string.&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;✅ &lt;code&gt;MY_KEY=value&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;❌ &lt;code&gt;MY_KEY=&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;✅ &lt;code&gt;KEY=value&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;❌ &lt;code&gt;KEY=&lt;/code&gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h4 id=&#34;c3-valid-key-prefix&#34;&gt;c3. Valid key prefix&lt;/h4&gt;
+&lt;h4 id=&#34;c4-key-is-not-sorted&#34;&gt;c4. Key is not sorted&lt;/h4&gt;
+&lt;p&gt;Checks that keys art sorted lexicographically.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;✅ &lt;code&gt;KEYB=value2&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;✅ &lt;code&gt;KEYC=value3&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;✅ &lt;code&gt;KEYD=value4&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;❌ &lt;code&gt;KEYA=value1&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;c5-key-has-an-invalid-first-character&#34;&gt;c5. Key has an invalid first character&lt;/h4&gt;
 &lt;p&gt;Checks that the first character of the key is valid. A valid key prefix must be a capital letter or a number.&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;✅ &lt;code&gt;MY_KEY=value&lt;/code&gt;&lt;/li&gt;
 &lt;li&gt;❌ &lt;code&gt;mY_KEY=value&lt;/code&gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h4 id=&#34;c4-no-empty-value&#34;&gt;c4. No empty value&lt;/h4&gt;
-&lt;p&gt;Checks that the value is not an empty string.&lt;/p&gt;
+&lt;h4 id=&#34;c6-valid-key&#34;&gt;c6. Valid Key&lt;/h4&gt;
+&lt;p&gt;Checks that the key is valid. A valid key should consist of only capital letters, numbers, and underscores.&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;✅ &lt;code&gt;MY_KEY=value&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;❌ &lt;code&gt;MY_KEY=&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;✅ &lt;code&gt;MY_KEY1=value1&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;❌ &lt;code&gt;my-key-1=value1&lt;/code&gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h4 id=&#34;c15-no-empty-last-line&#34;&gt;c15. No empty last line&lt;/h4&gt;
+&lt;h4 id=&#34;c7-unnecessary-quotes&#34;&gt;c7. Unnecessary quotes&lt;/h4&gt;
+&lt;p&gt;Checks that the value isn&amp;rsquo;t quoted unnecessarily.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;✅ &lt;code&gt;KEY=&amp;quot;quote this&amp;quot;&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;❌ &lt;code&gt;KEY=&amp;quot;noquotes&amp;quot;&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;c8-extra-spacing-around-separator&#34;&gt;c8. Extra spacing around separator&lt;/h4&gt;
+&lt;p&gt;Checks that there are no spaces around the separator.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;✅ &lt;code&gt;KEY=value&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;❌ &lt;code&gt;KEY = value&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;❌ &lt;code&gt;KEY= value&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;❌ &lt;code&gt;KEY =value&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;c9-substitution-without-proper-quoting&#34;&gt;c9. Substitution without proper quoting&lt;/h4&gt;
+&lt;p&gt;Checks that the value uses proper quoting around substitutions.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;✅ &lt;code&gt;KEY=&amp;quot;some ${FOO} value&amp;quot;&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;❌ &lt;code&gt;KEY=some $FOO value&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;c10-leading-or-trailing-whitespace&#34;&gt;c10. Leading or trailing whitespace&lt;/h4&gt;
+&lt;p&gt;Checks that the value does&amp;rsquo;t have leading or trailing whitespace&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;✅ &lt;code&gt;KEY=value&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;❌ &lt;code&gt;KEY= value&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;❌ &lt;code&gt;KEY= value &lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;❌ &lt;code&gt;KEY=value &lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;c11-whitespace-without-proper-quoting&#34;&gt;c11. Whitespace without proper quoting&lt;/h4&gt;
+&lt;p&gt;Checks that the value doesn&amp;rsquo;t contain whitespace without proper quoting&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;✅ &lt;code&gt;KEY=&amp;quot;value with spaces&amp;quot;&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;❌ &lt;code&gt;KEY=value with spaces&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;❌ &lt;code&gt;KEY=value with new\nlines&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;c12-no-empty-last-line&#34;&gt;c12. No empty last line&lt;/h4&gt;
 &lt;p&gt;Checks that the last line of an &lt;code&gt;.env&lt;/code&gt; file is not empty.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
 &lt;p&gt;✅&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;MY_KEY&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;value1
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;OTHER&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;value2
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;❌&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;MY_KEY&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;value1
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;OTHER&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;value2
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</content>
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;KEY1&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;value1
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;KEY2&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;value2
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;❌&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;KEY1&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;value1
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;KEY2&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;value2
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt; 
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;c13-multiple-successive-blank-lines&#34;&gt;c13. Multiple successive blank lines&lt;/h4&gt;
+&lt;p&gt;Checks that blank lines are not repeated.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;✅&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;KEY1&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;value1
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;KEY2&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;value2
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;❌&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;KEY1&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;value1
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;KEY2&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;value2 
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;c14-value-is-missing-proper-quoting&#34;&gt;c14. Value is missing proper quoting&lt;/h4&gt;
+&lt;p&gt;Checks that values containing an equals sign are properly quoted.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;✅ &lt;code&gt;KEY=&amp;quot;setting=true&amp;quot;&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;❌ &lt;code&gt;KEY=setting=true&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;c15-line-does-not-have-a-valid-separator&#34;&gt;c15. Line does not have a valid separator&lt;/h4&gt;
+&lt;p&gt;Checks that the line contains an equals sign separator.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;✅ &lt;code&gt;KEY=value&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;❌ &lt;code&gt;KEY=&amp;gt;value&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</content>
     </item>
     
     <item>
