@@ -159,4 +159,4 @@ Checks that values containing an equals sign are properly quoted.
 Checks that the line contains an equals sign separator.
 
 - :white_check_mark: `KEY=value`
-- :x: `KEY=>value`
+- :x: `KEY:value`

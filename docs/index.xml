@@ -176,7 +176,7 @@ Checks Duplicate key Invalid delimiter in key Key without value Key is not sorte
 &lt;p&gt;Checks that the line contains an equals sign separator.&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;✅ &lt;code&gt;KEY=value&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;❌ &lt;code&gt;KEY=&amp;gt;value&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;❌ &lt;code&gt;KEY:value&lt;/code&gt;&lt;/li&gt;
 &lt;/ul&gt;
 </content>
     </item>
