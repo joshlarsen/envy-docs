@@ -6,7 +6,7 @@ Envy checks for the following `.env` file best practices and required items.
 
 # Checks
 
-1. [Duplicate key](#c1-duplicate-key
+1. [Duplicate key](#c1-duplicate-key)
 2. [Invalid delimiter in key](#c2-invalid-delimiter-in-key)
 3. [Key without value](#c3-key-without-value)
 4. [Key is not sorted](#c4-key-is-not-sorted)

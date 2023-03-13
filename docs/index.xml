@@ -12,11 +12,11 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://envylint.dev/about/</guid>
-      <description>Envy Envy is a linter for .env files written in Go. It aims to be fast, accurate, and easy to use. It runs on Windows, Linux, and macOS.
+      <description>Envy Envy is a linter for .env files written in Go. It aims to be fast, accurate, and easy to use. It runs on Linux and macOS.
 Envy can help lint single .env files, lint entire directories of .env files, or be integrated into CI to lint build and deployment stage .env files.
 Envy was inspired by the Rust .env linter dotenv-linter, with the aim to provide similar functionality, but from a tool written in Go.</description>
       <content>&lt;h1 id=&#34;envy&#34;&gt;Envy&lt;/h1&gt;
-&lt;p&gt;Envy is a linter for &lt;code&gt;.env&lt;/code&gt; files written in Go. It aims to be fast, accurate, and easy to use. It runs on Windows, Linux, and macOS.&lt;/p&gt;
+&lt;p&gt;Envy is a linter for &lt;code&gt;.env&lt;/code&gt; files written in Go. It aims to be fast, accurate, and easy to use. It runs on Linux and macOS.&lt;/p&gt;
 &lt;p&gt;Envy can help lint single &lt;code&gt;.env&lt;/code&gt; files, lint entire directories of &lt;code&gt;.env&lt;/code&gt; files, or be integrated into CI to lint build and deployment stage &lt;code&gt;.env&lt;/code&gt; files.&lt;/p&gt;
 &lt;p&gt;Envy was inspired by the Rust &lt;code&gt;.env&lt;/code&gt; linter &lt;a href=&#34;https://dotenv-linter.github.io/&#34;&gt;dotenv-linter&lt;/a&gt;, with the aim to provide similar functionality, but from a tool written in Go.&lt;/p&gt;
 &lt;p&gt;Envy checks &lt;code&gt;.env&lt;/code&gt; files for things like:&lt;/p&gt;
@@ -40,11 +40,11 @@ Envy was inspired by the Rust .env linter dotenv-linter, with the aim to provide
       
       <guid>https://envylint.dev/checks/</guid>
       <description>Envy checks for the following .env file best practices and required items.
-Checks [Duplicate key](#c1-duplicate-key Invalid delimiter in key Key without value Key is not sorted Key has an invalid first character (prefix) Key is not valid Value has unnecessary quotes Extra spacing around separator Value uses substitution without proper quoting Value has leading or trailing whitespace Value contains whitespace without proper quoting Last line is blank Multiple successive blank lines Value is missing proper quoting Line does not have a valid separator c1.</description>
+Checks Duplicate key Invalid delimiter in key Key without value Key is not sorted Key has an invalid first character (prefix) Key is not valid Value has unnecessary quotes Extra spacing around separator Value uses substitution without proper quoting Value has leading or trailing whitespace Value contains whitespace without proper quoting Last line is blank Multiple successive blank lines Value is missing proper quoting Line does not have a valid separator c1.</description>
       <content>&lt;p&gt;Envy checks for the following &lt;code&gt;.env&lt;/code&gt; file best practices and required items.&lt;/p&gt;
 &lt;h1 id=&#34;checks&#34;&gt;Checks&lt;/h1&gt;
 &lt;ol&gt;
-&lt;li&gt;[Duplicate key](#c1-duplicate-key&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#c1-duplicate-key&#34;&gt;Duplicate key&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;#c2-invalid-delimiter-in-key&#34;&gt;Invalid delimiter in key&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;#c3-key-without-value&#34;&gt;Key without value&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;#c4-key-is-not-sorted&#34;&gt;Key is not sorted&lt;/a&gt;&lt;/li&gt;

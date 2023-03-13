@@ -4,7 +4,7 @@ title = "About"
 
 # Envy
 
-Envy is a linter for `.env` files written in Go. It aims to be fast, accurate, and easy to use. It runs on Windows, Linux, and macOS.
+Envy is a linter for `.env` files written in Go. It aims to be fast, accurate, and easy to use. It runs on Linux and macOS.
 
 Envy can help lint single `.env` files, lint entire directories of `.env` files, or be integrated into CI to lint build and deployment stage `.env` files.
 
