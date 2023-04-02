@@ -29,7 +29,7 @@ Envy was inspired by the Rust .env linter dotenv-linter, with the aim to provide
 &lt;li&gt;incorrect spacing&lt;/li&gt;
 &lt;li&gt;incorrect quoting&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;Read more about &lt;a href=&#34;https://envylint.dev/usage&#34;&gt;usage&lt;/a&gt; and &lt;a href=&#34;https://envylint.dev/checks&#34;&gt;checks&lt;/a&gt;, or check out the &lt;a href=&#34;https://github.com/envy-lint/envy&#34;&gt;source&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Read more about &lt;a href=&#34;https://envylint.dev/usage&#34;&gt;usage&lt;/a&gt; and &lt;a href=&#34;https://envylint.dev/checks&#34;&gt;checks&lt;/a&gt;, or check out the &lt;a href=&#34;https://github.com/joshlarsen/envy&#34;&gt;source&lt;/a&gt;&lt;/p&gt;
 </content>
     </item>
     

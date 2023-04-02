@@ -20,4 +20,4 @@ Envy checks `.env` files for things like:
 - incorrect spacing
 - incorrect quoting
 
-Read more about [usage](/usage) and [checks](/checks), or check out the [source](https://github.com/envy-lint/envy)
+Read more about [usage](/usage) and [checks](/checks), or check out the [source](https://github.com/joshlarsen/envy)
